@@ -2,7 +2,6 @@ import requests
 url = 'https://www.baidu.com'
 response = requests.get(url)
 
-
 """
 获取请求对象
     print(response.request)
@@ -11,6 +10,3 @@ response = requests.get(url)
 请求url
     print(response.request.url)   
 """
-print(response.request)
-print(response.request.headers)
-print(response.request.url)

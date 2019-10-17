@@ -19,7 +19,7 @@ for url in url_list:
      # 发送请求
     response = requests.get(url,headers=h)
     data = response.content.decode()
-#     with open('t_name-{}.html'.format(start),'w',encoding='utf-8') as f:
+#     with open(t_name+'-{}.html'.format(start),'w',encoding='utf-8') as f:
     with open('{}_{}.html'.format(t_name,start),'w',encoding='utf-8') as f:
         f.write(data)
     start +=1

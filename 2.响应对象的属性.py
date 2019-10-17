@@ -4,6 +4,7 @@ response = requests.get(url)
 
 """
 text：获取文本信息 --> 字符串
+    print(response.text)
 
 encoding：获取猜测的编码格式 --> ISO-8859-1 --> 希腊格式 
     print(response.encoding)
@@ -26,14 +27,3 @@ status_code：获取状态码
 获取请求对象
     print(response.request)
 """
-
-print(response.text)
-print(response.encoding)
-response.encoding = 'utf-8'
-print(response.encoding)
-byte = response.content
-print(byte.decode('utf-8'))  # 解码
-print(response.url)
-print(response.headers)
-print(response.status_code)
-print(response.request)

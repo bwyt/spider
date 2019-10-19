@@ -1,4 +1,8 @@
 """
+requests
+    作用: 发送网络请求, 获取响应数据
+    安装: pip install requests
+
 requests 使用三步骤
 1. 导包
 import requests

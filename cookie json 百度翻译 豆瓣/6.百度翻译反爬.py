@@ -1,6 +1,7 @@
+# pip install pyexecjs
 import requests, execjs
-# 获取本次翻译的语种(输入的语种)
-url_lang = 'https://fanyi.baidu.com/langdetect'
+
+url_lang = 'https://fanyi.baidu.com/langdetect'  # 获取本次翻译的语种(输入的语种)
 world = input('要翻译的单词：')
 h = {
     'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36'
@@ -17,7 +18,7 @@ lan = data1['lan']
 with open('demo.js', 'r') as f:
     js = f.read()
 # word = 'hah'
-sgin = execjs.compile(js).call('e',world)
+sgin = execjs.compile(js).call('e',world)  # execjs.compile(js),call('函数名',参数)
 # print(sgin)
 
 # 准备翻译的url

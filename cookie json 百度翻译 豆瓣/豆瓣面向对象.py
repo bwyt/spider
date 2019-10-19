@@ -29,12 +29,14 @@ class Me:
             dic['rate'] = i['rate']
             dic['cover'] = i['cover']
             data_list.append(dic)
+
         return data_list
 
     def save_data(self, data_list):
-        with open('豆瓣1.json', 'w', encoding='utf-8') as f:
-            json.dump(data_list, f, ensure_ascii=False)
-            f.write(',\n')
+        with open('豆瓣11.json', 'w', encoding='utf-8') as f:
+            for data in data_list:
+                json.dump(data, f, ensure_ascii=False)
+                f.write(',\n')
 
     def run(self):
         list = self.get_data()

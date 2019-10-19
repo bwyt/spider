@@ -23,7 +23,7 @@ headers：获取响应头
     
 status_code：获取状态码
     print(response.status_code)
-    
+   
 获取请求对象
     print(response.request)
 """

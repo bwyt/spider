@@ -13,7 +13,7 @@ response = requests.get(url, headers=h)
 data = response.json()
 list = data['subjects']
 
-with open('豆瓣.json', 'w', encoding='utf-8') as f:
+with open('豆瓣.txt', 'w', encoding='utf-8') as f:
     for i in list:
         dic = {}
         dic['title'] = i['title']

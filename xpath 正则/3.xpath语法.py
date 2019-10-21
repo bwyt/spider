@@ -1,4 +1,19 @@
 """
+lxml是一款高性能的 Python HTML/XML解析器，我们可以利用XPath，来快速的定位特定元素以及获取节点信息
+
+	安装:pip install lxml
+	导包:from lxml import html
+	转换element对象:html.fromstring(str)
+	使用xpath语法提取数据.xpath(xpath语法)
+
+XPATH提取数据的原则:
+	先分组, 获取包含数据的标签列表
+	遍历标签列表, 提取数据.
+
+"""
+
+
+"""
 1. 准备html字符串
     text =''
 

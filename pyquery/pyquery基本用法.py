@@ -42,27 +42,27 @@ css选择器：
         获取id为container的标签下的li标签     print(doc('#container li'))
         获取class为item-0和active的标签       print(doc('.item-0.active'))
         
-	2.  .类属性值
+    2.  .类属性值
         选择类为item-1的标签                  print(doc('.item-1'))
         
-	3.  标签名
+    3.  标签名
         选择所有li                            print(doc('li'))
 """
 
 """
 查询子元素：
     find()，获取所有后代元素                 div = doc('#container')
-                                           print(div.find('li'))
+                                             print(div.find('li'))
                                         
-    children()，获取子级元素                print(div.children('ul'))
+    children()，获取子级元素                 print(div.children('ul'))
     
     parent()，父节点：获取父级元素           li = doc('.item-1.active')
-                                           print(li.parent())
+                                             print(li.parent())
                                            
     parents()，祖先节点：获取祖先级元素      print(li.parents())
     
     siblings()，兄弟节点：获取兄弟元素       print(li.siblings())           不传入css选择器就是获取所有的兄弟
-                                           print(li.siblings('.item-1'))  传入css选择器就是获取特定的兄弟
+                                             print(li.siblings('.item-1'))  传入css选择器就是获取特定的兄弟
 """
 
 # 遍历pyquery对象
@@ -73,9 +73,6 @@ for li in lis.items():
     print(li.text())
     # 获取标签属性.attr('属性名')
     print(li.attr('class'))
-    # 获取html
-	print(li.html())
-    
 
     
 lis = doc('li')
@@ -83,11 +80,12 @@ print(lis.items())
 """
 伪类选择器：
     li = doc('li:first-child')      第一个标签
-	li = doc('li:last-child')		最后一个标签
-	li = doc('li:nth-child(2)')	    获取第二个标签
-	li = doc('li:gt(2)')	        获取序号大于2标签
-	li = doc('li:nth-child(2n)')	获取偶数标签标签
-	li = doc('li:contains(second)')	包涵second文本的标签
-"""
+    li = doc('li:last-child')		最后一个标签
+    li = doc('li:nth-child(2)')	    获取第二个标签
+    li = doc('li:gt(2)')	        获取序号大于2标签
+    li = doc('li:nth-child(2n)')	获取偶数标签标签
+    li = doc('li:contains(second)')	包涵second文本的标签
 print(li)
+"""
+
 
